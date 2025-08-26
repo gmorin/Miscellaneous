@@ -14,7 +14,7 @@ foreach ($UninstallKey in $UninstallKeys) {
     }
 }
 
-switch ($InstalledVersion -ge $ExpectedVersion) {
+switch ([Version] $InstalledVersion -ge [Version] $ExpectedVersion) {
     $true { 
         Write-Output "Installed"
         Exit 0
